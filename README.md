@@ -2,7 +2,7 @@
 création d'une surcouche d'utilisation de l'api rest alwaysdata sous forme de groupe d'aliases bash
 
 ```shell
- ______   __                                                    __             __               
+  ______   __                                                    __             __               
  /      \ |  \                                                  |  \           |  \              
 |  $$$$$$\| $$ __   __   __   ______   __    __   _______   ____| $$  ______  _| $$_     ______  
 | $$__| $$| $$|  \ |  \ |  \ |      \ |  \  |  \ /       \ /      $$ |      \|   $$ \   |      \ 
