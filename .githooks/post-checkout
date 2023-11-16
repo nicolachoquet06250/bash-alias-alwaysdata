@@ -8,7 +8,11 @@ if {
 fi
 
 if [[ ! -d "${HOME}/.bash_aliases_alwaysdata" ]];then
-  ln -s "$(pwd)" "${HOME}/.bash_aliases_alwaysdata";
+  path=""
+  if [[ "$1" == "install-script" ]];then
+    path="/bash-alias-alwaysdata"
+  fi
+  ln -s "$(pwd)${path}" "${HOME}/.bash_aliases_alwaysdata";
 fi
 
 file_path=".bash_aliases_alwaysdata/.bash_aliases"
