@@ -20,13 +20,13 @@ if [[ ! -d "${HOME}/.bash-alias-alwaysdata" ]];then
 fi
 
 file_path=".bash-alias-alwaysdata/.bash_aliases"
-
-source_1="source \"\${HOME}/${file_path}\""
-
+source="source \"\${HOME}/${file_path}\""
 bash_aliases_path="${HOME}/.bash_aliases"
 
 file_content="$(cat "${bash_aliases_path}")"
 IFS=$'\n'
 read -rd '' -a lines <<<"${file_content}"
 
-[[ "${lines[*]}" != *"$source_1"* ]] && echo "source \"\${HOME}/${file_path}\"" >> "${bash_aliases_path}" || echo "" >> /dev/null
+if [[ "${lines[*]}" != *"$source"* ]];then
+  echo "source \"\${HOME}/${file_path}\"" >> "${bash_aliases_path}"
+fi
